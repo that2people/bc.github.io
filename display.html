@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+</head>
+<body>
+    <h1>Submitted Data</h1>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+
+    <script>
+        // Retrieve data from local storage
+        document.getElementById("displayName").innerText = localStorage.getItem("name");
+        document.getElementById("displayEmail").innerText = localStorage.getItem("email");
+        document.getElementById("displayMessage").innerText = localStorage.getItem("message");
+    </script>
+</body>
+</html>
