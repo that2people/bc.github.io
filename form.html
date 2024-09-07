@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+</head>
+<body>
+    <h1>Request Form</h1>
+    <form id="requestForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("requestForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Store data in local storage (or you could use session storage)
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("message", message);
+
+            // Redirect to the display page
+            window.location.href = "display.html";
+        });
+    </script>
+</body>
+</html>
