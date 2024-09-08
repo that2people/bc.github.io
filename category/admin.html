@@ -126,7 +126,7 @@ If you were given this page by THE OWNER you are a admin, have fun with these ad
 
 		
 <div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/hidden.html">
+  <a href="#" onclick="checkPassword()">
   <div class="game-item">
     <div class="list-game">
       <div class="list-thumbnail"><img src="/images/image_1_optimized.png" class="lazyload" alt="..." title="unblock websites">
@@ -136,6 +136,14 @@ If you were given this page by THE OWNER you are a admin, have fun with these ad
   </div>
   </a>
 </div>
+<script>
+function checkPassword() {
+  var password = prompt("Enter the password:");
+  if (password === "123") {
+    window.location.href = "/admin123.html";
+  }
+}
+</script>
 
 
 
